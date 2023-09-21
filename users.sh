@@ -52,3 +52,5 @@ while IFS= read -r username; do
 done <"$user_file"
 
 echo "User creation process completed"
+
+sudo apt install -y members
