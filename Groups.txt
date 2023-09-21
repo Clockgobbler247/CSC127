@@ -1,0 +1,6 @@
+ashlee:allstaff
+theceo:execs,allstaff,policy
+thecfo:execs,allstaff,hr,policy
+thecio:mgrs,allstaff,hr,policy
+salesmgr:mgrs,allstaff,policy
+researchmgr:mgrs,allstaff,policy
