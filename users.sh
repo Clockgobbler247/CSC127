@@ -29,9 +29,10 @@ fi
 random_password=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 12 | head -n 1)
 echo "Assigning password as $random_password"
 
-# Create the users
-while IFS= read -r username; do
+
+while IFS= read -r user; do
   # Check if the user already exists
+  username=$(echo $user | tr -d "\r\n")
   if id "$username" >/dev/null 2>&1; then
     echo "User $username already exists"
   else
