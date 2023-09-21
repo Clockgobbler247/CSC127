@@ -8,7 +8,7 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 # Read the input file
-user_file="/etc/scripts/usernames.txt"
+user_file="/etc/scripts/CSC127/usernames.txt"
 
 # Check if the input file exists
 if [ ! -f "$user_file" ]; then
