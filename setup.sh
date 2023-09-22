@@ -24,7 +24,11 @@
 
 #fi
 
+# Installs members
+sudo apt install -y members
 
+#Install net-tools
+sudo apt install -y net-tools
 
 # Installs vim
 sudo apt install -y vim
