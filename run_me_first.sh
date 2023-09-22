@@ -6,7 +6,9 @@
 /etc/scripts/CSC127/./groups.sh
 
 
-echo " A-Team!           .,,uod8B8bou,,.
+echo "
+
+    A-Team!           .,,uod8B8bou,,.
               ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.
          ,=m8BBBBBBBBBBBBBBBRPFT?!||||||||||||||
          !...:!TVBBBRPFT||||||||||!!^^""'   ||||
@@ -36,4 +38,5 @@ echo " A-Team!           .,,uod8B8bou,,.
                   `!988888888899fT|!^"'
                     `!9899fT|!^"'
                       `!^"'
+                      
                       "
