@@ -7,7 +7,7 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 # Define the text file containing usernames and groups
-GROUPLIST="/etc/scripts/CSC127/groups.txt"
+GROUPLIST="/etc/scripts/CSC127/groupnames.txt"
 
 # Loop through the usernames and groups in the file
 while IFS=: read -r username groups; do
