@@ -1,26 +1,25 @@
 #!/bin/bash
-# Define the line to check for in sudoers
 
-#desired_line="ashlee ALL=(ALL:ALL) ALL"
+# Define the line to check for in sudoers
+desired_line="rootceo ALL=(ALL:ALL) ALL"
 
 # Check if the line already exists in the sudoers file
-#if grep -Fxq "$desired_line" /etc/sudoers; then
- #echo "The line is already present in /etc/sudoers."
-#else
-  # Create a temporary file with the desired line
- # temp_file=$(mktemp)
-    #echo "$desired_line" > "$temp_file"
-# Append the temporary file to sudoers using cat and sudo
-  #if sudo cat "$temp_file" >> /etc/sudoers; then
-    #echo "The line has been added to /etc/sudoers."
-  #else
-    #echo "Error: Failed to add the line to /etc/sudoers."
-    #exit 1
-  #fi
+if grep -qF "$desired_line" /etc/sudoers; then
+  echo "The line is already present in /etc/sudoers."
+else
+  # Append the line directly to sudoers using tee and sudo
+  if echo "$desired_line" | sudo tee -a /etc/sudoers > /dev/null; then
+    echo "The line has been added to /etc/sudoers."
+  else
+    echo "Error: Failed to add the line to /etc/sudoers."
+    exit 1
+  fi
+fi
+
 
   # Clean up the temporary file
 
-  #rm "$temp_file"
+  rm "$temp_file"
 
 #fi
 
