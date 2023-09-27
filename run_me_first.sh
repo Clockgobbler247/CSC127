@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Run startup scripts
-/etc/scripts/CSC127/./setup.sh
-/etc/scripts/CSC127/./users.sh
-/etc/scripts/CSC127/./groups.sh
+/etc/scripts/CSC171/./setup.sh
+/etc/scripts/CSC171/./users.sh
+/etc/scripts/CSC171/./groups.sh
 
 # Clear the terminal
 clear
