@@ -23,14 +23,9 @@ fi
 
 #fi
 
-# Installs members
-sudo apt install -y members
+# Installs members, net-tools, vim, squid, and e2guardian
+sudo apt install -y members net-tools vim squid e2guardian
 
-#Install net-tools
-sudo apt install -y net-tools
-
-# Installs vim
-sudo apt install -y vim
 
 # Sets the date and time
 timedatectl set-timezone America/Chicago
