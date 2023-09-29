@@ -44,7 +44,7 @@ while IFS= read -r user; do
     echo "User $username created with custom shell and home directory"
     
     echo "$username:$random_password" | chpasswd
-    echo "$random_password" > /etc/scripts/CSC127/userpasswd.txt
+    echo "$random_password" > /etc/scripts/CSC171/userpasswd.txt
     echo "Assigned random password to user $username: $random_password"
 
     # Force the user to change the password at the first login
