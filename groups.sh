@@ -41,3 +41,18 @@ while IFS=: read -r username groups; do
 done < "$GROUPLIST"
 
 echo "User group assignment completed."
+
+#Add directories and permissions
+mkdir /home/HumanResources
+mkdir /home/Incorporation
+mkdir /home/Policy
+mkdir /home/Collab
+
+chown hr /home/HumanResources
+chmod 700 /home/HumanResources
+chown execs /home/Incorporation
+chmod 700 /home/Incorporation
+chown policy /home/Policy
+chmod 700 /home/Policy
+chown allstaff /home/Collab
+chmod 700 /home/Collab
