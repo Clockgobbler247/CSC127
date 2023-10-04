@@ -48,11 +48,11 @@ mkdir /home/Incorporation
 mkdir /home/Policy
 mkdir /home/Collab
 
-chown -G hr /home/HumanResources
-chmod 700 /home/HumanResources
-chown  -G execs /home/Incorporation
-chmod 700 /home/Incorporation
-chown -G policy /home/Policy
-chmod 700 /home/Policy
-chown -G allstaff /home/Collab
-chmod 700 /home/Collab
+chgrp hr /home/HumanResources
+chmod 770 /home/HumanResources
+chgrp execs /home/Incorporation
+chmod 770 /home/Incorporation
+chgrp policy /home/Policy
+chmod 770 /home/Policy
+chgrp allstaff /home/Collab
+chmod 770 /home/Collab
