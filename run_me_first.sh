@@ -5,6 +5,22 @@
 /etc/scripts/CSC171/./users.sh
 /etc/scripts/CSC171/./groups.sh
 
+
+#Add directories and permissions
+mkdir /home/HumanResources
+mkdir /home/Incorporation
+mkdir /home/Policy
+mkdir /home/Collab
+
+chgrp hr /home/HumanResources
+chmod 770 /home/HumanResources
+chgrp execs /home/Incorporation
+chmod 770 /home/Incorporation
+chgrp policy /home/Policy
+chmod 770 /home/Policy
+chgrp allstaff /home/Collab
+chmod 770 /home/Collab
+
 # Clear the terminal
 clear
 
