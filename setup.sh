@@ -24,6 +24,7 @@ fi
 #fi
 
 # Installs members, net-tools, vim, squid, and e2guardian
+sudo apt update
 sudo apt install -y members net-tools vim squid e2guardian
 
 
