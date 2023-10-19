@@ -34,7 +34,7 @@ echo
 
 # Backup the files using tar.
 #rsync $dest/$archive_file $backup_files
-sudo rsync -aAXHv --delete $backup_files $dest/$archive_file
+sudo rsync -aAXHv --delete --exclude=.cache/* --exclude=tmp/* $backup_files $dest/$archive_file
 
 echo
 
