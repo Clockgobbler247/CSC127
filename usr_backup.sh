@@ -13,7 +13,7 @@ day=$(date +%m_%d_%Y)
 
 hostname=$(hostname -s)
 
-archive_file="$hostname-$day"
+archive_file="$hostname-usr_data-$day"
 
 # Print variable values for debugging
 
@@ -33,8 +33,8 @@ date
 echo
 
 # Backup the files using tar.
-#tar czf $dest/$archive_file $backup_files
-sudo rsync -aAXHv --delete --exclude=/etc/scripts/* --exclude=/dev/* --exclude=/proc/* --exclude=/backups/* --exclude=/home/* --exclude=/sys/* --exclude=/tmp/* --exclude=/run/* --exclude=/mnt/* --exclude=/media/* --exclude="swapfile" --exclude="lost+found" --exclude=".cache" --exclude="Downloads" --exclude=".VirtualBoxVMs" --exclude=".ecryptfs" $backup_files $dest/$archive_file
+#rsync $dest/$archive_file $backup_files
+sudo rsync -aAXHv --delete $backup_files $dest/$archive_file
 
 echo
 
