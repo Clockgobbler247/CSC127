@@ -1,6 +1,6 @@
 # What to backup. 
 
-backup_files="/home"
+backup_files="/home/*"
 
 # Where to backup to
 
