@@ -11,7 +11,7 @@ backup_files="/"
 
 # Where to backup to
 
-dest="/backups/sys_backup/full_backup/new"
+dest="/backups/sys_backup/diff_backup/"
 
 
 # Create archive filename
@@ -22,7 +22,7 @@ day=$(date +%m_%d_%Y)
 hostname=$(hostname -s)
 
 
-archive_file="$hostname-$day"
+archive_file="$hostname-$day-diff"
 
 full_backup="/backups/sys_backup/full_backup/new/*"
 
