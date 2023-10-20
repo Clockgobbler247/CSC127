@@ -4,7 +4,7 @@ backup_files="/home/*"
 
 # Where to backup to
 
-dest="/backups/usr_backup"
+dest="/backups/usr_backup/full_backup/new/"
 
 
 # Create archive filename
