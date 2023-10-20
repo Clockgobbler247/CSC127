@@ -13,7 +13,7 @@ day=$(date +%m_%d_%Y)
 
 hostname=$(hostname -s)
 
-archive_file="$hostname-usr_data-$day"
+archive_file="$hostname-Usr-data_full_backup"
 
 # Print variable values for debugging
 
