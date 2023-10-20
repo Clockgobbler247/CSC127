@@ -35,13 +35,11 @@ dest="/backups/sys_backup/full_backup/new"
 
 # Create archive filename
 
-day=$(date +%m_%d_%Y)
-
 
 hostname=$(hostname -s)
 
 
-archive_file="$hostname-$day"
+archive_file="$hostname-Full_sys_backup"
 
 
 # Print variable values for debugging
