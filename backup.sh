@@ -30,7 +30,7 @@ backup_files="/"
 
 # Where to backup to
 
-dest="/backups/sys_backup"
+dest="/backups/sys_backup/full_backup/new"
 
 
 # Create archive filename
