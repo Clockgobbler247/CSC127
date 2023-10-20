@@ -24,7 +24,7 @@ hostname=$(hostname -s)
 
 archive_file="$hostname-$day-diff"
 
-full_backup="/backups/sys_backup/full_backup/new/*"
+full_backup="/backups/sys_backup/full_backup/new/Team-A*"
 
 
 # Print variable values for debugging
@@ -33,8 +33,6 @@ echo "dest: $dest"
 
 
 echo "archive_file: $archive_file"
-
-
 
 
 #Create Directory for backup
