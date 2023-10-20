@@ -9,8 +9,6 @@ dest="/backups/usr_backup/full_backup/new/"
 
 # Create archive filename
 
-day=$(date +%m_%d_%Y)
-
 hostname=$(hostname -s)
 
 archive_file="$hostname-Usr-data_full_backup"
