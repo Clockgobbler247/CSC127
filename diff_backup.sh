@@ -24,7 +24,7 @@ hostname=$(hostname -s)
 
 archive_file="$hostname-$day-diff"
 
-full_backup="/backups/sys_backup/full_backup/new/Team-A*"
+full_backup="/backups/sys_backup/full_backup/new/Team-A-Full_sys_backup"
 
 
 # Print variable values for debugging
