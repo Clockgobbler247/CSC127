@@ -16,7 +16,7 @@ full_backup="/backups/usr_backup/full_backup/new/Team-A-Usr-data_full_backup"
 
 # Print variable values for debugging
 echo "dest: $dest"
-echo "archive_file: $archive_filea
+echo "archive_file: $archive_file"
 
 
 #Create Directory for backup
@@ -32,7 +32,7 @@ echo
 #rsync $dest/$archive_file $backup_files
 sudo rsync -aAXHv --link-dest=$full_backup --delete --exclude=.cache/* --exclude=tmp/* $backup_files $dest/$archive_file
 echo
-echo "Backup finished"
+echo " Backup finished "
 date
 
 
