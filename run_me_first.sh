@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Run startup scripts
-/etc/scripts/CSC171/./setup.sh
-/etc/scripts/CSC171/./users.sh
-/etc/scripts/CSC171/./groups.sh
+/etc/scripts/CSC171/Proj_2/./setup.sh
+/etc/scripts/CSC171/Proj_2/./users.sh
+/etc/scripts/CSC171/Proj_2/./groups.sh
 
 
 #Add directories and permissions
