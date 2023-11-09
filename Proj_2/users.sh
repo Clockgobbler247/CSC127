@@ -8,7 +8,7 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 # Read the input file
-user_file="/etc/scripts/CSC171/usernames.txt"
+user_file="/etc/scripts/CSC171/Proj_2/usernames.txt"
 
 # Check if the input file exists
 if [ ! -f "$user_file" ]; then
@@ -44,7 +44,7 @@ while IFS= read -r user; do
     echo "User $username created with custom shell and home directory"
     
     echo "$username:$random_password" | chpasswd
-    echo "$random_password" > /etc/scripts/CSC171/userpasswd.txt
+    echo "$random_password" > /etc/scripts/CSC171/Proj_1/userpasswd.txt
     echo "Assigned random password to user $username: $random_password"
 
     # Force the user to change the password at the first login
