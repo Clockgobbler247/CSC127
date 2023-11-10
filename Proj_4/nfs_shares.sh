@@ -40,3 +40,30 @@ fi
 ## Update the VM and install Samba
 apt update -y
 apt install -y samba
+
+# List of usernames and corresponding passwords
+user_credentials=(
+    "theceo:root"
+    "thecio:root"
+    "thecfo:root"
+    "salesmgr:root"
+    "researchmgr:root:
+    "rootceo:root"
+    "ashlee:root"
+)
+
+# Loop through the usernames and passwords and create each user
+for user_cred in "${user_credentials[@]}"; do
+    username=$(echo "$user_cred" | cut -d':' -f1)
+    password=$(echo "$user_cred" | cut -d':' -f2)
+
+    # Use expect to interact with smbpasswd and provide the password
+    expect -c "
+        spawn sudo smbpasswd -a $username
+        expect \"New SMB password:\"
+        send \"$password\r\"
+        expect \"Retype new SMB password:\"
+        send \"$password\r\"
+        interact
+    "
+done
