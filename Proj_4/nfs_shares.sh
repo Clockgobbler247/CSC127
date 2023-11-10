@@ -67,3 +67,7 @@ for user_cred in "${user_credentials[@]}"; do
         interact
     "
 done
+
+# Restart System Services
+sudo systemctl start smbd && sudo systemctl start nmbd
+sudo systemctl enable smbd nmbd
