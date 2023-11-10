@@ -14,6 +14,8 @@ mkfs.ext4 /dev/sdd
 
 # Mount /shares to sdd
 mkdir /shares
+mkdir /shares/collab
+mkdir /shares/research
 mount /dev/sdd /shares
 chmod 777 /shares
 
