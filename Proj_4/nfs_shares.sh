@@ -38,7 +38,7 @@ result=$(sudo blkid -o value -s UUID "/dev/sdd")
 echo "UUID: $result"
 
 # Define the line to check for in fstab
-desired_line1="UUID=$result  /backups ext4  defaults  0 2"
+desired_line1="UUID=$result  /shares ext4  defaults  0 2"
 
 # Check if the line already exists in the fstab file
 if grep -Fxq "$desired_line1" /etc/fstab; then
