@@ -9,6 +9,19 @@ if [ "$(id -u)" -ne 0 ]; then
   exit 1
 fi
 
+# Change hostname of VM
+rm -rf /etc/hostname
+touch /etc/hostname
+
+# Check if the line already exists in the /etc/hostname file
+if grep -Fxq "Team-A2" /etc/hostname; then
+  echo "The line is already present in /etc/hostname."
+else
+  # Add the line to /etc/hostname using echo and append (>>) operator
+  echo "Team-A2" | sudo tee -a /etc/hostname > /dev/null
+  echo "Hostname has been changed."
+fi
+
 # Format sdd
 mkfs.ext4 /dev/sdd
 
