@@ -39,7 +39,7 @@ fi
 
 ## Update the VM and install Samba
 apt update -y
-apt install -y samba
+apt install -y samba expect
 
 # List of usernames and corresponding passwords
 user_credentials=(
