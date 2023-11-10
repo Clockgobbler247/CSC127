@@ -3,8 +3,20 @@
 ########################### Project #4 - NFS shares ################################
 ####################################################################################
 
-# Format newly added disk
-sudo mkfs.ext4 /dev/sdd
+# Check if the script is run as root
+if [ "$(id -u)" -ne 0 ]; then
+  echo "Please run this script as root."
+  exit 1
+fi
+
+# Format sdd
+mkfs.ext4 /dev/sdd
+
+# Mount /shares to sdd
+mkdir /shares
+mount /dev/sdd /shares
+chmod 777 /shares
+
 
 # Aquire the UUID for /dev/sdd
 result=$(sudo blkid -o value -s UUID "/dev/sdd")
@@ -26,4 +38,5 @@ fi
 
 
 ## Update the VM and install Samba
-sudo apt update -y && sudo apt install -y samba
+apt update -y
+apt install -y samba
