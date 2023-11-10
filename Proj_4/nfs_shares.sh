@@ -47,7 +47,7 @@ user_credentials=(
     "thecio:root"
     "thecfo:root"
     "salesmgr:root"
-    "researchmgr:root:
+    "researchmgr:root"
     "rootceo:root"
     "ashlee:root"
 )
