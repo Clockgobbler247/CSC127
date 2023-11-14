@@ -4,7 +4,7 @@ backup_files="/shares/collab/*"
 
 # Where to backup to
 
-dest="/backups/shares/collab/full_backups"
+dest="/backups/shares/collab/full_backups/new"
 
 
 # Create archive filename
