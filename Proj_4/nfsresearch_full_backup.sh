@@ -4,7 +4,7 @@ backup_files="/shares/research/*"
 
 # Where to backup to
 
-dest="/backups/shares/research/full_backups"
+dest="/backups/shares/research/full_backups/new"
 
 
 # Create archive filename
