@@ -13,11 +13,9 @@ fi
 mkfs.ext4 /dev/sdd
 
 # Mount /shares to sdd
-mkdir /shares
-mkdir /shares/collab
-mkdir /shares/research
+mkdir -p /shares/{collab,research}
 mount /dev/sdd /shares
-chmod 777 /shares
+chmod -R 777 /shares
 
 
 # Aquire the UUID for /dev/sdd
@@ -37,6 +35,11 @@ else
   echo "$desired_line1" | sudo tee -a /etc/fstab > /dev/null
   echo "The line has been added to /etc/fstab."
 fi
+
+## Create Directories for backups
+sudo mkdir -p /backups/shares/{collab,research}/{full_backup,diff_backup}
+sudo mkdir /backups/shares/collab/full_backup/{new,old}
+sudo mkdir /backups/shares/research/full_backup/{new,old}
 
 
 ## Update the VM and install Samba
