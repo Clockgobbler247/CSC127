@@ -11,7 +11,7 @@ dest="/backups/shares/collab/diff_backup"
 day=$(date +%m_%d_%Y)
 hostname=$(hostname -s)
 archive_file="$hostname-nfscollab_share-$day-diff"
-full_backup="/backups/shares/full_backup/new/Team-A-nfscollab_share_full_backup"
+full_backup="/backups/shares/collab/full_backup/new/Team-A-nfscollab_share_full_backup"
 
 
 # Print variable values for debugging
